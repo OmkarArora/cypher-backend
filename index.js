@@ -11,6 +11,12 @@ app.use(cors());
 
 initDBConnection();
 
+const questionsRouter = require("./routers/questions.router");
+app.use("/questions", questionsRouter);
+
+const quizRouter = require("./routers/quiz.router");
+app.use("/quiz", quizRouter);
+
 app.get("/", (req, res) => {
   res.send("Connected to Cypher Quiz server");
 });

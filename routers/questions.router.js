@@ -25,7 +25,7 @@ router
       savedQuestion.__v = undefined;
       res.json({ success: true, question: savedQuestion });
     } catch (error) {
-      res.status(500),
+      res.status(500).
         json({
           success: false,
           message: "Unable to create question",
@@ -33,3 +33,5 @@ router
         });
     }
   });
+
+  module.exports = router;
